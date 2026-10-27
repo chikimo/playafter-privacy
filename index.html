@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +21,62 @@
 <body>
 <main>
 
+<nav><a href="#en" lang="en">English</a> · <a href="#th" lang="th">ไทย</a> · <a href="#es" lang="es">Español</a> · <a href="#pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="#id" lang="id">Bahasa Indonesia</a> · <a href="#vi" lang="vi">Tiếng Việt</a></nav>
+
+<section id="en" lang="en">
+<h1>PlayAfter Privacy Policy</h1>
+<p class="meta">Effective 27 October 2026. The Thai version below is the original; this is a translation.</p>
+
+<p>PlayAfter is an Android app for parents. It locks the apps a parent chooses until the child has read or done homework for the set time and the parent confirms with a PIN. This policy explains what data the app accesses, what it is used for, where it is kept, and when it is deleted.</p>
+
+<h2>Consent screen text</h2>
+<p>The app shows this text in the device's language during first setup, before it asks for any permission. The parent must tap "Accept" to continue.</p>
+<blockquote>
+<p>PlayAfter locks the apps you choose on this device. They open only after your child has read or done homework for the time you set, and you have confirmed with your PIN.</p>
+<p>While reading, the app uses the front camera to count time only while it sees a face. Camera images are processed on this device only.</p>
+<p>The app reads the device's usage data to know which app is open, and shows you how long your child used the locked apps while the lock was not working. This data stays on this device only.</p>
+<p>No data leaves this device. The app has no INTERNET permission, so it cannot send data anywhere.</p>
+<p>This app is designed to be set up by a parent aged 18 or over, and to be used while the parent is near the child.</p>
+<p><strong>Keep stills for review.</strong> When on, the app keeps a few low-resolution stills of the latest reading session on this device only, for you to look at before you confirm, and deletes them when you confirm or reject. Off by default.</p>
+</blockquote>
+
+<h2>Data the app accesses and keeps</h2>
+<table>
+<tr><th>Data</th><th>Used for</th><th>Where and how long</th></tr>
+<tr><td>Front camera images</td><td>Detecting whether a face is present, to count reading time. The camera runs only while the reading screen is on screen.</td><td>Processed in memory one frame at a time. Not saved. No video is recorded.</td></tr>
+<tr><td>Stills of the latest reading session (only when the parent turns the switch on; off by default)</td><td>Letting the parent look before confirming reading time.</td><td>At most 6 stills, 320 px on the longest side, in the app's private storage. Deleted when the parent confirms or rejects, when a new reading session starts, or when the switch is turned off. Never saved to the device gallery.</td></tr>
+<tr><td>Device usage data ("Usage access" permission)</td><td>Knowing which app is on screen so locked apps can be covered, and working out how long the child used locked apps while the lock was not working (for example after a restart, or when PlayAfter was stopped).</td><td>For each span when the lock was not working, the app keeps the start and end time, the cause (device restart, PlayAfter stopped, permission turned off), and the package names of locked apps with the seconds they were used. Reports build up until the parent confirms or rejects a reading session, and are then all deleted. The app also keeps the last time the lock was working, and the start and end times of play time and temporary unlocks (so they are not counted as spans); these are replaced by newer values or deleted when the app is removed. It copies no other usage history from the device.</td></tr>
+<tr><td>List of installed apps that open from the home screen</td><td>Letting the parent choose which apps to lock.</td><td>Only the package names of chosen apps are kept, until the parent changes them or removes the app.</td></tr>
+<tr><td>Parent PIN</td><td>Confirming reading time, unlocking for a while, and opening settings.</td><td>Kept as a hash (HMAC) made with a key in the device's Android Keystore. The PIN itself is not stored.</td></tr>
+<tr><td>Settings and state</td><td>Reading time, exchange rate, reading session state, remaining play time, and the count of wrong PIN entries with the lockout time.</td><td>In the app's private storage until the app is removed.</td></tr>
+</table>
+<p>The app does not access contacts, location, the microphone, messages, or other files on the device.</p>
+
+<h2>Sending and sharing data</h2>
+<p>PlayAfter sends no data off the device and shares no data with anyone. The app has no INTERNET permission, no server, no user accounts, no ads, no analytics, and no SDK that sends data off the device. Face detection uses Google's MediaPipe library, which runs on the device. It brings along a Google data transport component, but because the app has no INTERNET permission, that component cannot send anything. The app turns off Android backup, so its data is not backed up to a Google account either.</p>
+<p>If the user has turned on Android's diagnostics sharing, Google Play may receive crash reports through Android vitals, according to the device settings. Android sends these, not PlayAfter.</p>
+
+<h2>Children</h2>
+<p>PlayAfter is designed for a parent aged 18 or over to install and set up on the device the child uses. The child's data (camera images, stills, and app usage) stays on that device. Stills and reports are shown on the parent's confirmation screen after the child finishes reading. That screen opens without a PIN (so the child can see their own stills), but confirming or rejecting needs the PIN.</p>
+
+<h2>Deleting data</h2>
+<p>Removing PlayAfter deletes all of its data. Turning off the stills switch deletes existing stills at once. The developer holds no copy of any data, so there is nothing to request deletion of from the developer.</p>
+
+<h2>Security</h2>
+<p>All data is in the app's private storage, which other apps cannot read. The PIN is stored as a hash with a key that never leaves the Android Keystore.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the date at the top changes, and the app's consent screen text will match the new version.</p>
+
+<h2>Contact</h2>
+<p>PlayAfter developer: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="th" lang="th">
 <h1>นโยบายความเป็นส่วนตัวของ PlayAfter</h1>
-<p class="meta">มีผลตั้งแต่ 20 ตุลาคม 2026 · <a href="#en">English version</a></p>
+<p class="meta">มีผลตั้งแต่ 27 ตุลาคม 2026</p>
 
 <p>PlayAfter เป็นแอพ Android สำหรับผู้ปกครอง ล็อกแอพที่ผู้ปกครองเลือกไว้จนกว่าลูกจะอ่านหนังสือหรือทำการบ้านครบเวลาที่ตั้ง แล้วผู้ปกครองใส่ PIN ยืนยัน นโยบายนี้อธิบายว่าแอพเข้าถึงข้อมูลอะไร ใช้ทำอะไร เก็บไว้ที่ไหน และลบเมื่อไร</p>
 
@@ -67,56 +121,210 @@
 
 <h2>ติดต่อ</h2>
 <p>ผู้พัฒนา PlayAfter: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+</section>
 
 <hr>
 
-<section id="en" lang="en">
-<h1>PlayAfter Privacy Policy</h1>
-<p class="meta">Effective 20 October 2026. The Thai version above is the original; this is a translation.</p>
+<section id="es" lang="es">
+<h1>Política de privacidad de PlayAfter</h1>
+<p class="meta">Vigente desde el 27 de octubre de 2026. La versión en tailandés es la original; esta es una traducción.</p>
 
-<p>PlayAfter is an Android app for parents. It locks the apps a parent chooses until the child has read or done homework for the set time and the parent confirms with a PIN. This policy explains what data the app accesses, what it is used for, where it is kept, and when it is deleted.</p>
+<p>PlayAfter es una app de Android para padres. Bloquea las apps que elige el padre o la madre hasta que el niño haya leído o hecho la tarea durante el tiempo establecido y el padre o la madre lo confirme con un PIN. Esta política explica a qué datos accede la app, para qué los usa, dónde los guarda y cuándo los borra.</p>
 
-<h2>Consent screen text</h2>
-<p>The app shows this text (in Thai) during first setup, before it asks for any permission. The parent must tap "Accept" to continue.</p>
+<h2>Texto de la pantalla de consentimiento</h2>
+<p>La app muestra este texto en el idioma del dispositivo durante la primera configuración, antes de pedir cualquier permiso. El padre o la madre debe tocar "Aceptar" para continuar.</p>
 <blockquote>
-<p>PlayAfter locks the apps you choose on this device. They open only after your child has read or done homework for the time you set, and you have confirmed with your PIN.</p>
-<p>While reading, the app uses the front camera to count time only while it sees a face. Camera images are processed on this device only.</p>
-<p>The app reads the device's usage data to know which app is open, and shows you how long your child used the locked apps while the lock was not working. This data stays on this device only.</p>
-<p>No data leaves this device. The app has no INTERNET permission, so it cannot send data anywhere.</p>
-<p>This app is designed to be set up by a parent aged 18 or over, and to be used while the parent is near the child.</p>
-<p><strong>Keep stills for review.</strong> When on, the app keeps a few low-resolution stills of the latest reading session on this device only, for you to look at before you confirm, and deletes them when you confirm or reject. Off by default.</p>
+<p>PlayAfter bloquea las apps que elijas en este dispositivo. Solo se abren después de que tu hijo haya leído o hecho la tarea durante el tiempo que configures y tú lo hayas confirmado con tu PIN.</p>
+<p>Durante la lectura, la app usa la cámara frontal para contar el tiempo solo mientras ve una cara. Las imágenes de la cámara se procesan solo en este dispositivo.</p>
+<p>La app lee los datos de uso del dispositivo para saber qué app está abierta, y te muestra cuánto tiempo usó tu hijo las apps bloqueadas mientras el bloqueo no funcionaba. Estos datos se quedan solo en este dispositivo.</p>
+<p>Ningún dato sale de este dispositivo. La app no tiene el permiso INTERNET, así que no puede enviar datos a ningún lugar.</p>
+<p>Esta app está diseñada para que la configure un padre o una madre de 18 años o más, y para usarse mientras el padre o la madre esté cerca del niño.</p>
+<p><strong>Guardar fotos para revisar.</strong> Si está activado, la app guarda unas pocas fotos de baja resolución de la última sesión de lectura solo en este dispositivo, para que las veas antes de confirmar, y las borra cuando confirmas o rechazas. Desactivado de forma predeterminada.</p>
 </blockquote>
 
-<h2>Data the app accesses and keeps</h2>
+<h2>Datos a los que accede la app y que guarda</h2>
 <table>
-<tr><th>Data</th><th>Used for</th><th>Where and how long</th></tr>
-<tr><td>Front camera images</td><td>Detecting whether a face is present, to count reading time. The camera runs only while the reading screen is on screen.</td><td>Processed in memory one frame at a time. Not saved. No video is recorded.</td></tr>
-<tr><td>Stills of the latest reading session (only when the parent turns the switch on; off by default)</td><td>Letting the parent look before confirming reading time.</td><td>At most 6 stills, 320 px on the longest side, in the app's private storage. Deleted when the parent confirms or rejects, when a new reading session starts, or when the switch is turned off. Never saved to the device gallery.</td></tr>
-<tr><td>Device usage data ("Usage access" permission)</td><td>Knowing which app is on screen so locked apps can be covered, and working out how long the child used locked apps while the lock was not working (for example after a restart, or when PlayAfter was stopped).</td><td>For each span when the lock was not working, the app keeps the start and end time, the cause (device restart, PlayAfter stopped, permission turned off), and the package names of locked apps with the seconds they were used. Reports build up until the parent confirms or rejects a reading session, and are then all deleted. The app also keeps the last time the lock was working, and the start and end times of play time and temporary unlocks (so they are not counted as spans); these are replaced by newer values or deleted when the app is removed. It copies no other usage history from the device.</td></tr>
-<tr><td>List of installed apps that open from the home screen</td><td>Letting the parent choose which apps to lock.</td><td>Only the package names of chosen apps are kept, until the parent changes them or removes the app.</td></tr>
-<tr><td>Parent PIN</td><td>Confirming reading time, unlocking for a while, and opening settings.</td><td>Kept as a hash (HMAC) made with a key in the device's Android Keystore. The PIN itself is not stored.</td></tr>
-<tr><td>Settings and state</td><td>Reading time, exchange rate, reading session state, remaining play time, and the count of wrong PIN entries with the lockout time.</td><td>In the app's private storage until the app is removed.</td></tr>
+<tr><th>Dato</th><th>Para qué se usa</th><th>Dónde y por cuánto tiempo</th></tr>
+<tr><td>Imágenes de la cámara frontal</td><td>Detectar si hay una cara, para contar el tiempo de lectura. La cámara solo funciona mientras se muestra la pantalla de lectura.</td><td>Se procesan en la memoria, un cuadro a la vez. No se guardan. No se graba video.</td></tr>
+<tr><td>Fotos de la última sesión de lectura (solo cuando el padre o la madre activa el interruptor; desactivado de forma predeterminada)</td><td>Permitir que el padre o la madre las vea antes de confirmar el tiempo de lectura.</td><td>Como máximo 6 fotos, de 320 px en el lado más largo, en el almacenamiento privado de la app. Se borran cuando el padre o la madre confirma o rechaza, cuando empieza una nueva sesión de lectura o cuando se desactiva el interruptor. Nunca se guardan en la galería del dispositivo.</td></tr>
+<tr><td>Datos de uso del dispositivo (permiso "Acceso a datos de uso")</td><td>Saber qué app está en pantalla para poder cubrir las apps bloqueadas, y calcular cuánto tiempo usó el niño las apps bloqueadas mientras el bloqueo no funcionaba (por ejemplo, después de un reinicio o cuando se detuvo PlayAfter).</td><td>Por cada periodo en que el bloqueo no funcionó, la app guarda la hora de inicio y de fin, la causa (reinicio del dispositivo, PlayAfter detenido, permiso desactivado) y los nombres de paquete de las apps bloqueadas con los segundos que se usaron. Los informes se acumulan hasta que el padre o la madre confirma o rechaza una sesión de lectura, y entonces se borran todos. La app también guarda la última hora en que el bloqueo estaba funcionando, y las horas de inicio y fin del tiempo de juego y de los desbloqueos temporales (para que no se cuenten como periodos); estos valores se reemplazan por otros más recientes o se borran cuando se desinstala la app. No copia ningún otro historial de uso del dispositivo.</td></tr>
+<tr><td>Lista de apps instaladas que se abren desde la pantalla principal</td><td>Permitir que el padre o la madre elija qué apps bloquear.</td><td>Solo se guardan los nombres de paquete de las apps elegidas, hasta que el padre o la madre los cambie o desinstale la app.</td></tr>
+<tr><td>PIN para padres</td><td>Confirmar el tiempo de lectura, desbloquear por un rato y abrir la configuración.</td><td>Se guarda como un hash (HMAC) creado con una clave del Android Keystore del dispositivo. El PIN en sí no se guarda.</td></tr>
+<tr><td>Configuración y estado</td><td>Tiempo de lectura, proporción, estado de la sesión de lectura, tiempo de juego restante y la cantidad de intentos de PIN incorrectos junto con el tiempo de bloqueo.</td><td>En el almacenamiento privado de la app hasta que se desinstala la app.</td></tr>
 </table>
-<p>The app does not access contacts, location, the microphone, messages, or other files on the device.</p>
+<p>La app no accede a los contactos, la ubicación, el micrófono, los mensajes ni otros archivos del dispositivo.</p>
 
-<h2>Sending and sharing data</h2>
-<p>PlayAfter sends no data off the device and shares no data with anyone. The app has no INTERNET permission, no server, no user accounts, no ads, no analytics, and no SDK that sends data off the device. Face detection uses Google's MediaPipe library, which runs on the device. It brings along a Google data transport component, but because the app has no INTERNET permission, that component cannot send anything. The app turns off Android backup, so its data is not backed up to a Google account either.</p>
-<p>If the user has turned on Android's diagnostics sharing, Google Play may receive crash reports through Android vitals, according to the device settings. Android sends these, not PlayAfter.</p>
+<h2>Envío y uso compartido de datos</h2>
+<p>PlayAfter no envía datos fuera del dispositivo ni comparte datos con nadie. La app no tiene el permiso INTERNET, ni servidor, ni cuentas de usuario, ni anuncios, ni analíticas, ni ningún SDK que envíe datos fuera del dispositivo. La detección de caras usa la biblioteca MediaPipe de Google, que funciona en el dispositivo. Esa biblioteca incluye un componente de transporte de datos de Google, pero como la app no tiene el permiso INTERNET, ese componente no puede enviar nada. La app desactiva la copia de seguridad de Android, así que sus datos tampoco se respaldan en una cuenta de Google.</p>
+<p>Si el usuario activó el uso compartido de diagnósticos de Android, Google Play puede recibir informes de fallas a través de Android vitals, según la configuración del dispositivo. Esos informes los envía Android, no PlayAfter.</p>
 
-<h2>Children</h2>
-<p>PlayAfter is designed for a parent aged 18 or over to install and set up on the device the child uses. The child's data (camera images, stills, and app usage) stays on that device. Stills and reports are shown on the parent's confirmation screen after the child finishes reading. That screen opens without a PIN (so the child can see their own stills), but confirming or rejecting needs the PIN.</p>
+<h2>Niños</h2>
+<p>PlayAfter está diseñada para que un padre o una madre de 18 años o más la instale y la configure en el dispositivo que usa el niño. Los datos del niño (imágenes de la cámara, fotos y uso de apps) se quedan en ese dispositivo. Las fotos y los informes se muestran en la pantalla de confirmación del padre o la madre después de que el niño termina de leer. Esa pantalla se abre sin PIN (para que el niño pueda ver sus propias fotos), pero para confirmar o rechazar se necesita el PIN.</p>
 
-<h2>Deleting data</h2>
-<p>Removing PlayAfter deletes all of its data. Turning off the stills switch deletes existing stills at once. The developer holds no copy of any data, so there is nothing to request deletion of from the developer.</p>
+<h2>Eliminación de datos</h2>
+<p>Al desinstalar PlayAfter se borran todos sus datos. Al desactivar el interruptor de fotos se borran de inmediato las fotos existentes. El desarrollador no tiene ninguna copia de los datos, así que no hay nada que pedirle al desarrollador que borre.</p>
 
-<h2>Security</h2>
-<p>All data is in the app's private storage, which other apps cannot read. The PIN is stored as a hash with a key that never leaves the Android Keystore.</p>
+<h2>Seguridad</h2>
+<p>Todos los datos están en el almacenamiento privado de la app, que otras apps no pueden leer. El PIN se guarda como un hash con una clave que nunca sale del Android Keystore.</p>
 
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the date at the top changes, and the app's consent screen text will match the new version.</p>
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia, cambiará la fecha que aparece arriba, y el texto de la pantalla de consentimiento de la app coincidirá con la nueva versión.</p>
 
-<h2>Contact</h2>
-<p>PlayAfter developer: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+<h2>Contacto</h2>
+<p>Desarrollador de PlayAfter: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="pt-BR" lang="pt-BR">
+<h1>Política de Privacidade do PlayAfter</h1>
+<p class="meta">Em vigor desde 27 de outubro de 2026. A versão em tailandês é a original; esta é uma tradução.</p>
+
+<p>O PlayAfter é um app Android para pais. Ele bloqueia os apps que o pai ou a mãe escolhe até que a criança tenha lido ou feito o dever de casa pelo tempo definido e o pai ou a mãe confirme com um PIN. Esta política explica quais dados o app acessa, para que são usados, onde ficam guardados e quando são apagados.</p>
+
+<h2>Texto da tela de consentimento</h2>
+<p>O app mostra este texto no idioma do dispositivo durante a primeira configuração, antes de pedir qualquer permissão. O pai ou a mãe precisa tocar em "Aceitar" para continuar.</p>
+<blockquote>
+<p>O PlayAfter bloqueia os apps que você escolher neste dispositivo. Eles só abrem depois que seu filho ler ou fizer o dever de casa pelo tempo que você definiu e você confirmar com seu PIN.</p>
+<p>Durante a leitura, o app usa a câmera frontal e só conta o tempo enquanto ela vê um rosto. As imagens da câmera são processadas somente neste dispositivo.</p>
+<p>O app lê os dados de uso do dispositivo para saber qual app está aberto e mostra a você por quanto tempo seu filho usou os apps bloqueados enquanto o bloqueio não estava funcionando. Esses dados ficam somente neste dispositivo.</p>
+<p>Nenhum dado sai deste dispositivo. O app não tem a permissão INTERNET, então não consegue enviar dados para lugar nenhum.</p>
+<p>Este app foi feito para ser configurado por um pai ou uma mãe com 18 anos ou mais e para ser usado enquanto o pai ou a mãe estiver perto da criança.</p>
+<p><strong>Guardar fotos para conferir.</strong> Quando ativado, o app guarda algumas fotos em baixa resolução da última sessão de leitura somente neste dispositivo, para você ver antes de confirmar, e as apaga quando você confirma ou recusa. Desativado por padrão.</p>
+</blockquote>
+
+<h2>Dados que o app acessa e guarda</h2>
+<table>
+<tr><th>Dados</th><th>Usados para</th><th>Onde e por quanto tempo</th></tr>
+<tr><td>Imagens da câmera frontal</td><td>Detectar se há um rosto, para contar o tempo de leitura. A câmera só funciona enquanto a tela de leitura está aberta.</td><td>Processadas na memória, um quadro por vez. Não são salvas. Nenhum vídeo é gravado.</td></tr>
+<tr><td>Fotos da última sessão de leitura (só quando o pai ou a mãe ativa a opção; desativada por padrão)</td><td>Permitir que o pai ou a mãe veja antes de confirmar o tempo de leitura.</td><td>No máximo 6 fotos, com 320 px no lado maior, no armazenamento privado do app. Apagadas quando o pai ou a mãe confirma ou recusa, quando uma nova sessão de leitura começa ou quando a opção é desativada. Nunca são salvas na galeria do dispositivo.</td></tr>
+<tr><td>Dados de uso do dispositivo (permissão "Acesso ao uso")</td><td>Saber qual app está na tela para cobrir os apps bloqueados e calcular por quanto tempo a criança usou apps bloqueados enquanto o bloqueio não estava funcionando (por exemplo, depois de uma reinicialização ou quando o PlayAfter foi interrompido).</td><td>Para cada período em que o bloqueio não funcionou, o app guarda o horário de início e de fim, a causa (dispositivo reiniciado, PlayAfter interrompido, permissão desativada) e os nomes de pacote dos apps bloqueados com os segundos de uso de cada um. Os relatórios se acumulam até o pai ou a mãe confirmar ou recusar uma sessão de leitura e então são todos apagados. O app também guarda o último horário em que o bloqueio estava funcionando e os horários de início e de fim do tempo para brincar e dos desbloqueios temporários (para que não sejam contados como períodos sem bloqueio); esses valores são substituídos por valores mais novos ou apagados quando o app é removido. O app não copia nenhum outro histórico de uso do dispositivo.</td></tr>
+<tr><td>Lista de apps instalados que abrem pela tela inicial</td><td>Permitir que o pai ou a mãe escolha quais apps bloquear.</td><td>Só os nomes de pacote dos apps escolhidos são guardados, até o pai ou a mãe mudar a escolha ou remover o app.</td></tr>
+<tr><td>PIN dos pais</td><td>Confirmar o tempo de leitura, desbloquear por um tempo e abrir as configurações.</td><td>Guardado como um hash (HMAC) feito com uma chave do Android Keystore do dispositivo. O PIN em si não é armazenado.</td></tr>
+<tr><td>Configurações e estado</td><td>Tempo de leitura, taxa de troca, estado da sessão de leitura, tempo para brincar restante e o número de PINs incorretos com o horário do bloqueio por tentativas.</td><td>No armazenamento privado do app, até o app ser removido.</td></tr>
+</table>
+<p>O app não acessa contatos, localização, microfone, mensagens nem outros arquivos do dispositivo.</p>
+
+<h2>Envio e compartilhamento de dados</h2>
+<p>O PlayAfter não envia nenhum dado para fora do dispositivo e não compartilha dados com ninguém. O app não tem a permissão INTERNET, nem servidor, nem contas de usuário, nem anúncios, nem análises de uso, nem SDK que envie dados para fora do dispositivo. A detecção de rosto usa a biblioteca MediaPipe, do Google, que funciona no próprio dispositivo. Ela traz junto um componente de transporte de dados do Google, mas, como o app não tem a permissão INTERNET, esse componente não consegue enviar nada. O app desativa o backup do Android, então os dados dele também não vão para o backup na Conta do Google.</p>
+<p>Se o usuário tiver ativado o compartilhamento de diagnósticos do Android, o Google Play pode receber relatórios de falhas pelo Android vitals, de acordo com as configurações do dispositivo. Quem envia esses relatórios é o Android, não o PlayAfter.</p>
+
+<h2>Crianças</h2>
+<p>O PlayAfter foi feito para que um pai ou uma mãe com 18 anos ou mais o instale e configure no dispositivo que a criança usa. Os dados da criança (imagens da câmera, fotos e uso de apps) ficam nesse dispositivo. As fotos e os relatórios aparecem na tela de confirmação dos pais depois que a criança termina de ler. Essa tela abre sem PIN (para que a criança possa ver as próprias fotos), mas confirmar ou recusar exige o PIN.</p>
+
+<h2>Exclusão de dados</h2>
+<p>Remover o PlayAfter apaga todos os dados dele. Desativar a opção de fotos apaga na hora as fotos já guardadas. O desenvolvedor não tem cópia de nenhum dado, então não há nada para pedir ao desenvolvedor que apague.</p>
+
+<h2>Segurança</h2>
+<p>Todos os dados ficam no armazenamento privado do app, que outros apps não conseguem ler. O PIN é guardado como hash, com uma chave que nunca sai do Android Keystore.</p>
+
+<h2>Alterações nesta política</h2>
+<p>Se esta política mudar, a data no início muda, e o texto da tela de consentimento do app vai corresponder à nova versão.</p>
+
+<h2>Contato</h2>
+<p>Desenvolvedor do PlayAfter: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="id" lang="id">
+<h1>Kebijakan Privasi PlayAfter</h1>
+<p class="meta">Berlaku sejak 27 Oktober 2026. Versi bahasa Thai adalah versi asli. Versi ini adalah terjemahan.</p>
+
+<p>PlayAfter adalah aplikasi Android untuk orang tua. Aplikasi ini mengunci aplikasi yang dipilih orang tua sampai anak membaca atau mengerjakan pekerjaan rumah selama waktu yang ditetapkan dan orang tua mengonfirmasi dengan PIN. Kebijakan ini menjelaskan data apa saja yang diakses aplikasi, untuk apa data itu digunakan, di mana data disimpan, dan kapan data dihapus.</p>
+
+<h2>Teks layar persetujuan</h2>
+<p>Aplikasi menampilkan teks ini dalam bahasa perangkat saat penyiapan pertama, sebelum meminta izin apa pun. Orang tua harus mengetuk "Terima" untuk melanjutkan.</p>
+<blockquote>
+<p>PlayAfter mengunci aplikasi yang Anda pilih di perangkat ini. Aplikasi tersebut baru bisa dibuka setelah anak Anda membaca atau mengerjakan pekerjaan rumah selama waktu yang Anda tetapkan, dan Anda sudah mengonfirmasi dengan PIN Anda.</p>
+<p>Saat anak membaca, aplikasi menggunakan kamera depan dan hanya menghitung waktu ketika kamera melihat wajah. Gambar dari kamera hanya diproses di perangkat ini.</p>
+<p>Aplikasi membaca data penggunaan perangkat untuk mengetahui aplikasi mana yang sedang terbuka, dan menunjukkan kepada Anda berapa lama anak Anda menggunakan aplikasi yang dikunci saat penguncian tidak berfungsi. Data ini hanya tersimpan di perangkat ini.</p>
+<p>Tidak ada data yang keluar dari perangkat ini. Aplikasi tidak memiliki izin INTERNET, sehingga tidak dapat mengirim data ke mana pun.</p>
+<p>Aplikasi ini dirancang untuk disiapkan oleh orang tua berusia 18 tahun ke atas, dan digunakan saat orang tua berada di dekat anak.</p>
+<p><strong>Simpan foto untuk diperiksa.</strong> Jika diaktifkan, aplikasi menyimpan beberapa foto beresolusi rendah dari sesi membaca terakhir hanya di perangkat ini, agar dapat Anda lihat sebelum mengonfirmasi, lalu menghapusnya saat Anda mengonfirmasi atau menolak. Nonaktif secara default.</p>
+</blockquote>
+
+<h2>Data yang diakses dan disimpan aplikasi</h2>
+<table>
+<tr><th>Data</th><th>Digunakan untuk</th><th>Lokasi dan lama penyimpanan</th></tr>
+<tr><td>Gambar dari kamera depan</td><td>Mendeteksi ada atau tidaknya wajah, untuk menghitung waktu membaca. Kamera hanya aktif selama layar membaca sedang ditampilkan.</td><td>Diproses di memori satu frame demi satu frame. Tidak disimpan. Tidak ada video yang direkam.</td></tr>
+<tr><td>Foto dari sesi membaca terakhir (hanya jika orang tua mengaktifkan sakelarnya; nonaktif secara default)</td><td>Memungkinkan orang tua melihatnya sebelum mengonfirmasi waktu membaca.</td><td>Maksimal 6 foto, 320 px pada sisi terpanjang, di penyimpanan pribadi aplikasi. Dihapus saat orang tua mengonfirmasi atau menolak, saat sesi membaca baru dimulai, atau saat sakelar dinonaktifkan. Tidak pernah disimpan ke galeri perangkat.</td></tr>
+<tr><td>Data penggunaan perangkat (izin "Akses penggunaan")</td><td>Mengetahui aplikasi mana yang tampil di layar agar aplikasi yang dikunci dapat ditutupi, dan menghitung berapa lama anak menggunakan aplikasi yang dikunci saat penguncian tidak berfungsi (misalnya setelah perangkat dimulai ulang, atau saat PlayAfter dihentikan).</td><td>Untuk setiap rentang waktu saat penguncian tidak berfungsi, aplikasi menyimpan waktu mulai dan waktu selesai, penyebabnya (perangkat dimulai ulang, PlayAfter dihentikan, izin dinonaktifkan), serta nama paket aplikasi yang dikunci beserta berapa detik aplikasi tersebut digunakan. Laporan terus terkumpul sampai orang tua mengonfirmasi atau menolak sesi membaca, lalu semuanya dihapus. Aplikasi juga menyimpan waktu terakhir penguncian berfungsi, serta waktu mulai dan selesai dari waktu bermain dan buka kunci sementara (agar tidak dihitung sebagai rentang tersebut). Nilai-nilai ini diganti dengan nilai yang lebih baru, atau dihapus saat aplikasi di-uninstal. Aplikasi tidak menyalin riwayat penggunaan lain dari perangkat.</td></tr>
+<tr><td>Daftar aplikasi terinstal yang dapat dibuka dari layar utama</td><td>Memungkinkan orang tua memilih aplikasi yang akan dikunci.</td><td>Hanya nama paket aplikasi yang dipilih yang disimpan, sampai orang tua mengubah pilihan atau meng-uninstal PlayAfter.</td></tr>
+<tr><td>PIN orang tua</td><td>Mengonfirmasi waktu membaca, membuka kunci sementara, dan membuka setelan.</td><td>Disimpan sebagai hash (HMAC) yang dibuat dengan kunci kriptografi di Android Keystore perangkat. PIN itu sendiri tidak disimpan.</td></tr>
+<tr><td>Setelan dan status</td><td>Waktu membaca, rasio tukar, status sesi membaca, sisa waktu bermain, serta jumlah PIN salah yang dimasukkan beserta waktu blokirnya.</td><td>Di penyimpanan pribadi aplikasi sampai aplikasi di-uninstal.</td></tr>
+</table>
+<p>Aplikasi tidak mengakses kontak, lokasi, mikrofon, pesan, atau file lain di perangkat.</p>
+
+<h2>Pengiriman dan pembagian data</h2>
+<p>PlayAfter tidak mengirim data apa pun keluar dari perangkat dan tidak membagikan data kepada siapa pun. Aplikasi tidak memiliki izin INTERNET, server, akun pengguna, iklan, analitik, maupun SDK yang mengirim data keluar dari perangkat. Deteksi wajah menggunakan library MediaPipe dari Google, yang berjalan di perangkat. Library ini menyertakan komponen pengiriman data Google, tetapi karena aplikasi tidak memiliki izin INTERNET, komponen tersebut tidak dapat mengirim apa pun. Aplikasi menonaktifkan pencadangan Android, sehingga datanya juga tidak dicadangkan ke Akun Google.</p>
+<p>Jika pengguna telah mengaktifkan berbagi data diagnostik Android, Google Play dapat menerima laporan error aplikasi melalui Android vitals, sesuai setelan perangkat. Laporan ini dikirim oleh Android, bukan oleh PlayAfter.</p>
+
+<h2>Anak-anak</h2>
+<p>PlayAfter dirancang untuk diinstal dan disiapkan oleh orang tua berusia 18 tahun ke atas di perangkat yang digunakan anak. Data anak (gambar kamera, foto, dan penggunaan aplikasi) tetap berada di perangkat tersebut. Foto dan laporan ditampilkan di layar konfirmasi orang tua setelah anak selesai membaca. Layar tersebut terbuka tanpa PIN (agar anak dapat melihat fotonya sendiri), tetapi untuk mengonfirmasi atau menolak diperlukan PIN.</p>
+
+<h2>Menghapus data</h2>
+<p>Meng-uninstal PlayAfter akan menghapus semua datanya. Menonaktifkan sakelar foto akan langsung menghapus foto yang ada. Pengembang tidak menyimpan salinan data apa pun, sehingga tidak ada data yang perlu diminta untuk dihapus dari pengembang.</p>
+
+<h2>Keamanan</h2>
+<p>Semua data berada di penyimpanan pribadi aplikasi, yang tidak dapat dibaca oleh aplikasi lain. PIN disimpan sebagai hash dengan kunci kriptografi yang tidak pernah keluar dari Android Keystore.</p>
+
+<h2>Perubahan pada kebijakan ini</h2>
+<p>Jika kebijakan ini berubah, tanggal di bagian atas akan berubah, dan teks layar persetujuan di aplikasi akan disesuaikan dengan versi baru.</p>
+
+<h2>Kontak</h2>
+<p>Pengembang PlayAfter: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="vi" lang="vi">
+<h1>Chính sách quyền riêng tư của PlayAfter</h1>
+<p class="meta">Có hiệu lực từ ngày 27 tháng 10 năm 2026. Bản tiếng Thái là bản gốc; đây là bản dịch.</p>
+
+<p>PlayAfter là ứng dụng Android dành cho phụ huynh. Ứng dụng khóa các ứng dụng do phụ huynh chọn cho đến khi trẻ đã đọc sách hoặc làm bài tập đủ thời gian đã đặt và phụ huynh xác nhận bằng mã PIN. Chính sách này giải thích ứng dụng truy cập những dữ liệu nào, dùng dữ liệu đó để làm gì, lưu ở đâu và khi nào xóa.</p>
+
+<h2>Nội dung màn hình đồng ý</h2>
+<p>Ứng dụng hiển thị nội dung này bằng ngôn ngữ của thiết bị trong lần thiết lập đầu tiên, trước khi xin bất kỳ quyền nào. Phụ huynh phải nhấn "Đồng ý" để tiếp tục.</p>
+<blockquote>
+<p>PlayAfter khóa các ứng dụng bạn chọn trên thiết bị này. Các ứng dụng đó chỉ mở được sau khi con bạn đã đọc sách hoặc làm bài tập đủ thời gian bạn đặt, và bạn đã xác nhận bằng mã PIN của mình.</p>
+<p>Trong lúc con đọc, ứng dụng dùng camera trước để tính thời gian, và chỉ tính khi camera nhìn thấy khuôn mặt. Hình ảnh từ camera chỉ được xử lý trên thiết bị này.</p>
+<p>Ứng dụng đọc dữ liệu sử dụng của thiết bị để biết ứng dụng nào đang mở, và cho bạn biết con bạn đã dùng các ứng dụng bị khóa trong bao lâu khi tính năng khóa không hoạt động. Dữ liệu này chỉ nằm trên thiết bị này.</p>
+<p>Không có dữ liệu nào rời khỏi thiết bị này. Ứng dụng không có quyền INTERNET nên không thể gửi dữ liệu đi bất cứ đâu.</p>
+<p>Ứng dụng này được thiết kế để phụ huynh từ 18 tuổi trở lên thiết lập, và để dùng khi phụ huynh ở gần con.</p>
+<p><strong>Lưu ảnh chụp để xem lại.</strong> Khi bật, ứng dụng lưu một vài ảnh chụp độ phân giải thấp của lượt đọc gần nhất, chỉ trên thiết bị này, để bạn xem trước khi xác nhận, và xóa các ảnh đó khi bạn xác nhận hoặc từ chối. Mặc định tắt.</p>
+</blockquote>
+
+<h2>Dữ liệu ứng dụng truy cập và lưu giữ</h2>
+<table>
+<tr><th>Dữ liệu</th><th>Dùng để</th><th>Lưu ở đâu và trong bao lâu</th></tr>
+<tr><td>Hình ảnh từ camera trước</td><td>Phát hiện có khuôn mặt hay không, để tính thời gian đọc. Camera chỉ chạy khi màn hình đọc đang hiển thị.</td><td>Được xử lý trong bộ nhớ, từng khung hình một. Không được lưu lại. Không quay video.</td></tr>
+<tr><td>Ảnh chụp của lượt đọc gần nhất (chỉ khi phụ huynh bật công tắc; mặc định tắt)</td><td>Để phụ huynh xem trước khi xác nhận thời gian đọc.</td><td>Tối đa 6 ảnh, cạnh dài nhất 320 px, trong bộ nhớ riêng của ứng dụng. Bị xóa khi phụ huynh xác nhận hoặc từ chối, khi một lượt đọc mới bắt đầu, hoặc khi công tắc bị tắt. Không bao giờ được lưu vào thư viện ảnh của thiết bị.</td></tr>
+<tr><td>Dữ liệu sử dụng thiết bị (mục "Quyền truy cập dữ liệu sử dụng" trong cài đặt)</td><td>Biết ứng dụng nào đang hiển thị trên màn hình để che các ứng dụng bị khóa, và tính xem trẻ đã dùng các ứng dụng bị khóa trong bao lâu khi tính năng khóa không hoạt động (ví dụ sau khi khởi động lại, hoặc khi PlayAfter bị dừng).</td><td>Với mỗi khoảng thời gian tính năng khóa không hoạt động, ứng dụng lưu thời điểm bắt đầu và kết thúc, nguyên nhân (thiết bị khởi động lại, PlayAfter bị dừng, quyền bị tắt), và tên gói (package name) của các ứng dụng bị khóa cùng số giây đã dùng. Các báo cáo được cộng dồn cho đến khi phụ huynh xác nhận hoặc từ chối một lượt đọc, rồi bị xóa hết. Ứng dụng cũng lưu thời điểm gần nhất tính năng khóa còn hoạt động, cùng thời điểm bắt đầu và kết thúc của thời gian chơi và các lần mở khóa tạm thời (để không tính chúng là khoảng không hoạt động); các giá trị này được thay bằng giá trị mới hơn, hoặc bị xóa khi gỡ ứng dụng. Ứng dụng không sao chép lịch sử sử dụng nào khác từ thiết bị.</td></tr>
+<tr><td>Danh sách các ứng dụng đã cài đặt mở được từ màn hình chính</td><td>Để phụ huynh chọn ứng dụng cần khóa.</td><td>Chỉ lưu tên gói của các ứng dụng được chọn, cho đến khi phụ huynh thay đổi lựa chọn hoặc gỡ ứng dụng.</td></tr>
+<tr><td>Mã PIN của phụ huynh</td><td>Xác nhận thời gian đọc, mở khóa tạm thời và mở phần cài đặt.</td><td>Được lưu dưới dạng mã băm (HMAC) tạo bằng một khóa trong Android Keystore của thiết bị. Bản thân mã PIN không được lưu.</td></tr>
+<tr><td>Cài đặt và trạng thái</td><td>Thời gian đọc, tỷ lệ đổi, trạng thái lượt đọc, thời gian chơi còn lại, và số lần nhập sai mã PIN cùng thời gian bị chặn nhập.</td><td>Trong bộ nhớ riêng của ứng dụng cho đến khi gỡ ứng dụng.</td></tr>
+</table>
+<p>Ứng dụng không truy cập danh bạ, vị trí, micrô, tin nhắn hay các tệp khác trên thiết bị.</p>
+
+<h2>Gửi và chia sẻ dữ liệu</h2>
+<p>PlayAfter không gửi dữ liệu nào ra khỏi thiết bị và không chia sẻ dữ liệu với bất kỳ ai. Ứng dụng không có quyền INTERNET, không có máy chủ, không có tài khoản người dùng, không có quảng cáo, không có công cụ phân tích, và không có SDK nào gửi dữ liệu ra khỏi thiết bị. Tính năng phát hiện khuôn mặt dùng thư viện MediaPipe của Google, chạy ngay trên thiết bị. Thư viện này đi kèm một thành phần truyền dữ liệu của Google, nhưng vì ứng dụng không có quyền INTERNET nên thành phần đó không thể gửi gì đi. Ứng dụng tắt tính năng sao lưu của Android, nên dữ liệu của ứng dụng cũng không được sao lưu vào tài khoản Google.</p>
+<p>Nếu người dùng đã bật tính năng chia sẻ dữ liệu chẩn đoán của Android, Google Play có thể nhận báo cáo sự cố qua Android vitals, tùy theo cài đặt của thiết bị. Các báo cáo này do Android gửi, không phải PlayAfter.</p>
+
+<h2>Trẻ em</h2>
+<p>PlayAfter được thiết kế để phụ huynh từ 18 tuổi trở lên cài đặt và thiết lập trên thiết bị mà trẻ dùng. Dữ liệu của trẻ (hình ảnh từ camera, ảnh chụp và việc sử dụng ứng dụng) chỉ nằm trên thiết bị đó. Ảnh chụp và báo cáo được hiển thị trên màn hình xác nhận của phụ huynh sau khi trẻ đọc xong. Màn hình đó mở được mà không cần mã PIN (để trẻ có thể xem ảnh chụp của chính mình), nhưng muốn xác nhận hoặc từ chối thì cần mã PIN.</p>
+
+<h2>Xóa dữ liệu</h2>
+<p>Gỡ PlayAfter sẽ xóa toàn bộ dữ liệu của ứng dụng. Tắt công tắc ảnh chụp sẽ xóa ngay các ảnh chụp hiện có. Nhà phát triển không giữ bản sao của bất kỳ dữ liệu nào, nên không có dữ liệu nào để yêu cầu nhà phát triển xóa.</p>
+
+<h2>Bảo mật</h2>
+<p>Mọi dữ liệu đều nằm trong bộ nhớ riêng của ứng dụng, nơi các ứng dụng khác không đọc được. Mã PIN được lưu dưới dạng mã băm, tạo bằng một khóa không bao giờ rời khỏi Android Keystore.</p>
+
+<h2>Thay đổi chính sách này</h2>
+<p>Nếu chính sách này thay đổi, ngày ở đầu trang sẽ thay đổi, và nội dung màn hình đồng ý của ứng dụng sẽ khớp với phiên bản mới.</p>
+
+<h2>Liên hệ</h2>
+<p>Nhà phát triển PlayAfter: <a href="mailto:chikimo.ai@gmail.com">chikimo.ai@gmail.com</a></p>
 </section>
 
 </main>
