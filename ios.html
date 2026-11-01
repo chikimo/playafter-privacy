@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlayAfter for iOS Privacy Policy</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1b1b1f; --muted: #4a4a52; --line: #d9d9e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #121216; --fg: #e8e8ee; --muted: #b4b4bf; --line: #34343c; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Thai", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  blockquote { margin: 0; padding: 8px 16px; border-left: 4px solid var(--line); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+  .meta { color: var(--muted); }
+  .lead { font-weight: 700; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+</style>
+</head>
+<body>
+<main>
+
+<!-- Each consent paragraph id is its key in ios/PlayAfter/Localizable.xcstrings; ConsentTextTests compares them word for word. -->
+<nav><a href="#en" lang="en">English</a> · <a href="#th" lang="th">ไทย</a> · <a href="#es" lang="es">Español</a> · <a href="#pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="#id" lang="id">Bahasa Indonesia</a> · <a href="#vi" lang="vi">Tiếng Việt</a></nav>
+
+<section id="en" lang="en">
+<h1>PlayAfter for iOS Privacy Policy</h1>
+<p class="meta">Effective 31 October 2026. This policy covers the iPhone and iPad app. The Android app has its own policy.</p>
+
+<p>PlayAfter is an iPhone and iPad app for parents. It uses Apple's Screen Time to lock the apps a parent chooses until the child has read or done homework for the set time and the parent confirms with a PIN. This policy explains what data the app accesses, what it is used for, where it is kept, and when it is deleted.</p>
+
+<h2>Consent screen text</h2>
+<p>The app shows this text in the device's language during first setup, before it asks for any permission. The parent must tap "Accept" to continue.</p>
+<blockquote>
+<p id="consent.what">PlayAfter uses Screen Time to lock the apps you choose on this device. They open only after your child has read or done homework for the time you set, and you have confirmed with your PIN.</p>
+<p id="consent.camera">While reading, the app uses the front camera to count time only while it sees a face. Camera images are processed on this device only.</p>
+<p id="consent.screenTime">If someone turns off PlayAfter's Screen Time permission, the app tells you the next time it opens, and shows how many minutes the locked apps were used in each hour of that time. iOS shows these minutes on this device only, and the app itself cannot read them.</p>
+<p id="consent.offline">No data leaves this device. The app has no code that sends data over the internet, and no ads or analytics.</p>
+<p id="consent.parent">This app is designed to be set up by a parent aged 18 or over, and to be used while the parent is near the child.</p>
+<p id="snapshots.title" class="lead">Keep stills for review</p>
+<p id="snapshots.body">When on, the app keeps a few low-resolution stills of the latest reading session on this device only, for you to look at before you confirm, and deletes them when you confirm or reject. Off by default.</p>
+</blockquote>
+
+<h2>Data the app accesses and keeps</h2>
+<table>
+<tr><th>Data</th><th>Used for</th><th>Where and how long</th></tr>
+<tr><td>Front camera images</td><td>Detecting whether a face is present, to count reading time. The camera runs only while the reading screen is on screen.</td><td>Processed in memory one frame at a time. Not saved. No video is recorded.</td></tr>
+<tr><td>Stills of the latest reading session (only when the parent turns the switch on; off by default)</td><td>Letting the parent look before confirming reading time.</td><td>At most 6 stills, 320 px on the longest side, in the app's private storage. Deleted when the parent confirms or rejects, when a new reading session starts, or when the switch is turned off. Never saved to the photo library.</td></tr>
+<tr><td>Apps, categories and websites the parent chooses to lock</td><td>Locking them with Screen Time. The parent chooses them in Apple's Screen Time picker.</td><td>iOS gives the app only codes (tokens) for the choices, not the names of the apps. The codes are kept until the parent changes the choice or removes the app.</td></tr>
+<tr><td>Screen Time permission, and use of the locked apps while it was off</td><td>Telling the parent that the Screen Time permission was turned off, and showing how many minutes the locked apps were used in each hour of that time.</td><td>The app keeps the last time it saw the permission, and the start and end time of each span when it was off, until the parent confirms or rejects a reading session. The minutes are shown on the confirmation screen by a PlayAfter extension through Apple's Screen Time report. The app itself cannot read or keep them.</td></tr>
+<tr><td>Parent PIN</td><td>Confirming reading time, unlocking for a while, and opening settings.</td><td>Kept as a hash (HMAC) made with a key in the device's Keychain that stays on this device. The PIN itself is not stored.</td></tr>
+<tr><td>Settings and state</td><td>Reading time, exchange rate, reading session state, the end time of play time and temporary unlocks, and the count of wrong PIN entries with the lockout time.</td><td>In the app's storage, shared only with PlayAfter's own extensions, until the app is removed.</td></tr>
+<tr><td>Notifications (iOS 17.0 to 26.4 only, if the parent allows them)</td><td>When the child taps the button on the Screen Time shield, a notification lets them open PlayAfter.</td><td>Created on the device. No push server is used.</td></tr>
+<tr><td>Play time countdown (Live Activity)</td><td>Showing the play time left on the Lock Screen and in the Dynamic Island.</td><td>Created on the device and ended when play time ends. No push server is used.</td></tr>
+</table>
+<p>The app does not access contacts, location, the microphone, photos, messages, or other files on the device.</p>
+
+<h2>Sending and sharing data</h2>
+<p>PlayAfter sends no data off the device and shares no data with anyone. The app has no code that sends data over the internet, no server, no user accounts, no ads, no analytics, and no third-party SDK. Its files are excluded from iCloud backup, so they are not copied to iCloud either.</p>
+<p>If the user has turned on Share With App Developers in the device's Analytics settings, Apple may send crash reports to the developer. Apple sends these, not PlayAfter.</p>
+
+<h2>Children</h2>
+<p>PlayAfter is designed for a parent aged 18 or over to install and set up on the device the child uses. The child's data (camera images, stills, and the record of when the Screen Time permission was off) stays on that device. Stills and reports are shown on the parent's confirmation screen after the child finishes reading. That screen opens without a PIN (so the child can see their own stills), but confirming or rejecting needs the PIN.</p>
+
+<h2>Deleting data</h2>
+<p>Removing PlayAfter deletes its data. iOS may keep the PIN key in the Keychain after the app is removed. The key is useless without the deleted data, and the app deletes it the first time it opens after it is installed again. Turning off the stills switch deletes existing stills at once. The developer holds no copy of any data, so there is nothing to request deletion of from the developer.</p>
+
+<h2>Security</h2>
+<p>All data is in storage that other apps cannot read, protected by iOS file encryption. The PIN is stored as a hash made with a key that is kept in the Keychain on this device only.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the date at the top changes, and the app's consent screen text will match the new version.</p>
+
+<h2>Contact</h2>
+<p>PlayAfter developer: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+<hr>
+
+<section id="th" lang="th">
+<h1>นโยบายความเป็นส่วนตัวของ PlayAfter บน iOS</h1>
+<p class="meta">มีผลตั้งแต่ 31 ตุลาคม 2026 นโยบายนี้ใช้กับแอพบน iPhone และ iPad แอพ Android มีนโยบายของตัวเอง</p>
+
+<p>PlayAfter เป็นแอพบน iPhone และ iPad สำหรับผู้ปกครอง แอพใช้เวลาหน้าจอ (Screen Time) ของ Apple ล็อกแอพที่ผู้ปกครองเลือกไว้ จนกว่าลูกจะอ่านหนังสือหรือทำการบ้านครบเวลาที่ตั้ง และผู้ปกครองใส่ PIN ยืนยัน นโยบายนี้อธิบายว่าแอพเข้าถึงข้อมูลอะไร ใช้ทำอะไร เก็บไว้ที่ไหน และลบเมื่อไร</p>
+
+<h2>ข้อความในหน้ายินยอม</h2>
+<p>แอพแสดงข้อความนี้ตามภาษาของเครื่องตอนตั้งค่าครั้งแรก ก่อนขอสิทธิ์ใด ๆ ผู้ปกครองต้องแตะ "ยอมรับ" จึงจะไปต่อได้</p>
+<blockquote>
+<p id="consent.what">PlayAfter ใช้เวลาหน้าจอ (Screen Time) ล็อกแอพที่คุณเลือกไว้บนเครื่องนี้ แอพเหล่านั้นจะเปิดได้เมื่อลูกอ่านหนังสือหรือทำการบ้านครบเวลาที่คุณตั้ง และคุณใส่ PIN ยืนยันแล้วเท่านั้น</p>
+<p id="consent.camera">ระหว่างอ่าน แอพใช้กล้องหน้าจับเวลาเฉพาะช่วงที่เห็นใบหน้า ภาพจากกล้องประมวลผลบนเครื่องนี้เท่านั้น</p>
+<p id="consent.screenTime">ถ้ามีคนปิดสิทธิ์เวลาหน้าจอของ PlayAfter แอพจะแจ้งคุณเมื่อเปิดแอพครั้งถัดไป และแสดงว่าแอพที่ล็อกไว้ถูกใช้กี่นาทีในแต่ละชั่วโมงของช่วงนั้น iOS แสดงตัวเลขนี้บนเครื่องนี้เท่านั้น และตัวแอพเองอ่านตัวเลขนี้ไม่ได้</p>
+<p id="consent.offline">ไม่มีข้อมูลใดออกจากเครื่องนี้ แอพไม่มีโค้ดที่ส่งข้อมูลผ่านอินเทอร์เน็ต และไม่มีโฆษณาหรือระบบวิเคราะห์การใช้งาน</p>
+<p id="consent.parent">แอพนี้ออกแบบให้ผู้ปกครองอายุ 18 ปีขึ้นไปเป็นผู้ตั้งค่า และใช้ตอนที่ผู้ปกครองอยู่ใกล้ลูก</p>
+<p id="snapshots.title" class="lead">เก็บภาพนิ่งให้ตรวจย้อน</p>
+<p id="snapshots.body">เมื่อเปิด แอพจะเก็บภาพนิ่งความละเอียดต่ำไม่กี่ภาพของรอบอ่านล่าสุดไว้ในเครื่องนี้เท่านั้น ให้คุณดูก่อนยืนยัน และลบทิ้งเมื่อคุณยืนยันหรือปฏิเสธ ค่าเริ่มต้นคือปิด</p>
+</blockquote>
+
+<h2>ข้อมูลที่แอพเข้าถึงและเก็บไว้</h2>
+<table>
+<tr><th>ข้อมูล</th><th>ใช้ทำอะไร</th><th>เก็บที่ไหนและนานเท่าไร</th></tr>
+<tr><td>ภาพจากกล้องหน้า</td><td>ตรวจว่ามีใบหน้าอยู่หรือไม่ เพื่อนับเวลาอ่าน กล้องทำงานเฉพาะตอนที่หน้าอ่านอยู่บนจอ</td><td>ประมวลผลในหน่วยความจำทีละภาพ ไม่บันทึก ไม่อัดวิดีโอ</td></tr>
+<tr><td>ภาพนิ่งของรอบอ่านล่าสุด (เฉพาะเมื่อผู้ปกครองเปิดสวิตช์ ค่าเริ่มต้นคือปิด)</td><td>ให้ผู้ปกครองดูก่อนยืนยันเวลาอ่าน</td><td>ไม่เกิน 6 ภาพ ด้านยาว 320 px อยู่ในพื้นที่ส่วนตัวของแอพ ลบเมื่อผู้ปกครองยืนยันหรือปฏิเสธ เมื่อเริ่มรอบอ่านใหม่ หรือเมื่อปิดสวิตช์ ไม่บันทึกลงคลังรูปภาพ</td></tr>
+<tr><td>แอพ หมวดหมู่ และเว็บไซต์ที่ผู้ปกครองเลือกล็อก</td><td>ล็อกด้วยเวลาหน้าจอ ผู้ปกครองเลือกในหน้าเลือกแอพของเวลาหน้าจอของ Apple</td><td>iOS ให้แอพแค่รหัส (token) ของสิ่งที่เลือก ไม่ให้ชื่อแอพ รหัสเก็บไว้จนกว่าผู้ปกครองจะเปลี่ยนสิ่งที่เลือกหรือลบแอพ</td></tr>
+<tr><td>สิทธิ์เวลาหน้าจอ และการใช้แอพที่ล็อกในช่วงที่สิทธิ์ถูกปิด</td><td>แจ้งผู้ปกครองว่าสิทธิ์เวลาหน้าจอถูกปิด และแสดงว่าแอพที่ล็อกถูกใช้กี่นาทีในแต่ละชั่วโมงของช่วงนั้น</td><td>แอพเก็บเวลาที่เห็นสิทธิ์ครั้งล่าสุด และเวลาเริ่มและจบของแต่ละช่วงที่สิทธิ์ถูกปิด จนกว่าผู้ปกครองจะยืนยันหรือปฏิเสธรอบอ่าน ตัวเลขนาทีแสดงในหน้ายืนยันโดย extension ของ PlayAfter ผ่านรายงานเวลาหน้าจอของ Apple ตัวแอพเองอ่านหรือเก็บตัวเลขนี้ไม่ได้</td></tr>
+<tr><td>PIN ของผู้ปกครอง</td><td>ยืนยันเวลาอ่าน ปลดล็อกชั่วคราว และเปิดหน้าตั้งค่า</td><td>เก็บเป็นค่า hash (HMAC) ที่สร้างด้วยกุญแจใน Keychain ของเครื่องซึ่งอยู่บนเครื่องนี้เท่านั้น ไม่เก็บตัว PIN</td></tr>
+<tr><td>ค่าตั้งและสถานะ</td><td>ระยะเวลาอ่าน อัตราแลก สถานะรอบอ่าน เวลาสิ้นสุดของเวลาเล่นและการปลดล็อกชั่วคราว และจำนวนครั้งที่ใส่ PIN ผิดพร้อมเวลาพัก</td><td>อยู่ในพื้นที่ของแอพ ใช้ร่วมกับ extension ของ PlayAfter เท่านั้น จนกว่าจะลบแอพ</td></tr>
+<tr><td>การแจ้งเตือน (เฉพาะ iOS 17.0 ถึง 26.4 และเมื่อผู้ปกครองอนุญาต)</td><td>เมื่อลูกแตะปุ่มบนหน้าบังของเวลาหน้าจอ แจ้งเตือนจะพาไปเปิด PlayAfter</td><td>สร้างบนเครื่อง ไม่ใช้ push server</td></tr>
+<tr><td>นับถอยหลังเวลาเล่น (Live Activity)</td><td>แสดงเวลาเล่นที่เหลือบนหน้าจอล็อกและใน Dynamic Island</td><td>สร้างบนเครื่องและจบเมื่อเวลาเล่นหมด ไม่ใช้ push server</td></tr>
+</table>
+<p>แอพไม่เข้าถึงรายชื่อติดต่อ ตำแหน่ง ไมโครโฟน รูปภาพ ข้อความ หรือไฟล์อื่นในเครื่อง</p>
+
+<h2>การส่งและแบ่งปันข้อมูล</h2>
+<p>PlayAfter ไม่ส่งข้อมูลออกจากเครื่องและไม่แบ่งปันข้อมูลกับใคร แอพไม่มีโค้ดที่ส่งข้อมูลผ่านอินเทอร์เน็ต ไม่มี server ไม่มีบัญชีผู้ใช้ ไม่มีโฆษณา ไม่มีระบบวิเคราะห์การใช้งาน และไม่มี SDK ของบุคคลภายนอก ไฟล์ของแอพไม่อยู่ในข้อมูลสำรอง iCloud จึงไม่ถูกคัดลอกไป iCloud ด้วย</p>
+<p>ถ้าผู้ใช้เปิด "แชร์กับนักพัฒนาแอพ" ในการตั้งค่าการวิเคราะห์ของเครื่อง Apple อาจส่งรายงานแอพขัดข้องให้นักพัฒนา Apple เป็นผู้ส่ง ไม่ใช่ PlayAfter</p>
+
+<h2>เด็ก</h2>
+<p>PlayAfter ออกแบบให้ผู้ปกครองอายุ 18 ปีขึ้นไปติดตั้งและตั้งค่าบนเครื่องที่ลูกใช้ ข้อมูลของลูก (ภาพจากกล้อง ภาพนิ่ง และบันทึกช่วงที่สิทธิ์เวลาหน้าจอถูกปิด) อยู่ในเครื่องนั้น ภาพนิ่งและรายงานแสดงในหน้ายืนยันของผู้ปกครองหลังลูกอ่านครบ หน้านั้นเปิดได้โดยไม่ต้องใส่ PIN (ลูกจึงเห็นภาพของตัวเอง) แต่การยืนยันหรือปฏิเสธต้องใส่ PIN</p>
+
+<h2>การลบข้อมูล</h2>
+<p>ลบแอพ PlayAfter แล้วข้อมูลของแอพถูกลบ iOS อาจเก็บกุญแจของ PIN ไว้ใน Keychain หลังลบแอพ กุญแจนี้ใช้ทำอะไรไม่ได้เมื่อไม่มีข้อมูลที่ถูกลบไป และแอพจะลบกุญแจนี้เมื่อเปิดครั้งแรกหลังติดตั้งใหม่ ปิดสวิตช์ภาพนิ่งแล้วภาพที่มีถูกลบทันที ผู้พัฒนาไม่มีสำเนาข้อมูลใด ๆ จึงไม่มีอะไรต้องขอให้ผู้พัฒนาลบ</p>
+
+<h2>ความปลอดภัย</h2>
+<p>ข้อมูลทั้งหมดอยู่ในพื้นที่ที่แอพอื่นอ่านไม่ได้ และได้รับการป้องกันด้วยการเข้ารหัสไฟล์ของ iOS PIN เก็บเป็นค่า hash ที่สร้างด้วยกุญแจซึ่งอยู่ใน Keychain บนเครื่องนี้เท่านั้น</p>
+
+<h2>การเปลี่ยนแปลงนโยบาย</h2>
+<p>ถ้านโยบายนี้เปลี่ยน วันที่ด้านบนจะเปลี่ยน และข้อความในหน้ายินยอมของแอพจะตรงกับฉบับใหม่</p>
+
+<h2>ติดต่อ</h2>
+<p>ผู้พัฒนา PlayAfter: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+<hr>
+
+<section id="es" lang="es">
+<h1>Política de privacidad de PlayAfter para iOS</h1>
+<p class="meta">Vigente desde el 31 de octubre de 2026. Esta política cubre la app para iPhone y iPad. La app para Android tiene su propia política.</p>
+
+<p>PlayAfter es una app para iPhone y iPad pensada para padres y madres. Usa Tiempo de uso de Apple para bloquear las apps que el padre o la madre elige hasta que el niño haya leído o hecho la tarea durante el tiempo configurado y el padre o la madre lo confirme con un PIN. Esta política explica a qué datos accede la app, para qué los usa, dónde los guarda y cuándo los borra.</p>
+
+<h2>Texto de la pantalla de consentimiento</h2>
+<p>La app muestra este texto en el idioma del dispositivo durante la configuración inicial, antes de pedir cualquier permiso. El padre o la madre debe tocar "Aceptar" para continuar.</p>
+<blockquote>
+<p id="consent.what">PlayAfter usa Tiempo de uso para bloquear las apps que elijas en este dispositivo. Solo se abren después de que tu hijo haya leído o hecho la tarea durante el tiempo que configures y tú lo hayas confirmado con tu PIN.</p>
+<p id="consent.camera">Durante la lectura, la app usa la cámara frontal para contar el tiempo solo mientras ve una cara. Las imágenes de la cámara se procesan solo en este dispositivo.</p>
+<p id="consent.screenTime">Si alguien desactiva el permiso de Tiempo de uso de PlayAfter, la app te avisa la próxima vez que se abra y muestra cuántos minutos se usaron las apps bloqueadas en cada hora de ese periodo. iOS muestra estos minutos solo en este dispositivo, y la app no puede leerlos.</p>
+<p id="consent.offline">Ningún dato sale de este dispositivo. La app no tiene código que envíe datos por internet, ni anuncios ni analíticas.</p>
+<p id="consent.parent">Esta app está diseñada para que la configure un padre o una madre de 18 años o más, y para usarse mientras el padre o la madre esté cerca del niño.</p>
+<p id="snapshots.title" class="lead">Guardar fotos para revisar</p>
+<p id="snapshots.body">Si está activado, la app guarda unas pocas fotos de baja resolución de la última sesión de lectura solo en este dispositivo, para que las veas antes de confirmar, y las borra cuando confirmas o rechazas. Desactivado de forma predeterminada.</p>
+</blockquote>
+
+<h2>Datos a los que accede la app y que guarda</h2>
+<table>
+<tr><th>Datos</th><th>Para qué se usan</th><th>Dónde y por cuánto tiempo</th></tr>
+<tr><td>Imágenes de la cámara frontal</td><td>Detectar si hay una cara, para contar el tiempo de lectura. La cámara solo funciona mientras la pantalla de lectura está visible.</td><td>Se procesan en memoria, un fotograma a la vez. No se guardan. No se graba video.</td></tr>
+<tr><td>Fotos de la última sesión de lectura (solo si el padre o la madre activa el interruptor; desactivado de forma predeterminada)</td><td>Permitir que el padre o la madre las vea antes de confirmar el tiempo de lectura.</td><td>Como máximo 6 fotos, de 320 px en el lado más largo, en el almacenamiento privado de la app. Se borran cuando el padre o la madre confirma o rechaza, cuando empieza una nueva sesión de lectura o cuando se desactiva el interruptor. Nunca se guardan en la fototeca.</td></tr>
+<tr><td>Apps, categorías y sitios web que el padre o la madre elige bloquear</td><td>Bloquearlos con Tiempo de uso. El padre o la madre los elige en el selector de Tiempo de uso de Apple.</td><td>iOS solo le da a la app códigos (tokens) de lo elegido, no los nombres de las apps. Los códigos se guardan hasta que el padre o la madre cambie la elección o elimine la app.</td></tr>
+<tr><td>Permiso de Tiempo de uso, y uso de las apps bloqueadas mientras estaba desactivado</td><td>Avisar al padre o la madre de que el permiso de Tiempo de uso se desactivó, y mostrar cuántos minutos se usaron las apps bloqueadas en cada hora de ese periodo.</td><td>La app guarda la última vez que vio el permiso, y la hora de inicio y fin de cada periodo en que estuvo desactivado, hasta que el padre o la madre confirme o rechace una sesión de lectura. Los minutos los muestra en la pantalla de confirmación una extensión de PlayAfter mediante el informe de Tiempo de uso de Apple. La app en sí no puede leerlos ni guardarlos.</td></tr>
+<tr><td>PIN del padre o la madre</td><td>Confirmar el tiempo de lectura, desbloquear por un rato y abrir la configuración.</td><td>Se guarda como un hash (HMAC) creado con una clave en el llavero (Keychain) del dispositivo que no sale de este dispositivo. El PIN en sí no se guarda.</td></tr>
+<tr><td>Configuración y estado</td><td>Tiempo de lectura, tasa de cambio, estado de la sesión de lectura, la hora de fin del tiempo de juego y de los desbloqueos temporales, y el número de intentos de PIN incorrectos con el tiempo de espera.</td><td>En el almacenamiento de la app, compartido solo con las extensiones de PlayAfter, hasta que se elimina la app.</td></tr>
+<tr><td>Notificaciones (solo iOS 17.0 a 26.4, si el padre o la madre las permite)</td><td>Cuando el niño toca el botón en la pantalla de bloqueo de Tiempo de uso, una notificación le permite abrir PlayAfter.</td><td>Se crean en el dispositivo. No se usa ningún servidor push.</td></tr>
+<tr><td>Cuenta regresiva del tiempo de juego (Live Activity)</td><td>Mostrar el tiempo de juego restante en la pantalla bloqueada y en la Dynamic Island.</td><td>Se crea en el dispositivo y termina cuando acaba el tiempo de juego. No se usa ningún servidor push.</td></tr>
+</table>
+<p>La app no accede a contactos, ubicación, micrófono, fotos, mensajes ni otros archivos del dispositivo.</p>
+
+<h2>Envío y uso compartido de datos</h2>
+<p>PlayAfter no envía datos fuera del dispositivo ni comparte datos con nadie. La app no tiene código que envíe datos por internet, ni servidor, ni cuentas de usuario, ni anuncios, ni analíticas, ni SDK de terceros. Sus archivos están excluidos de la copia de seguridad de iCloud, así que tampoco se copian a iCloud.</p>
+<p>Si el usuario activó Compartir con desarrolladores de apps en los ajustes de Análisis del dispositivo, Apple puede enviar informes de fallos al desarrollador. Los envía Apple, no PlayAfter.</p>
+
+<h2>Niños</h2>
+<p>PlayAfter está diseñada para que un padre o una madre de 18 años o más la instale y configure en el dispositivo que usa el niño. Los datos del niño (imágenes de la cámara, fotos y el registro de cuándo estuvo desactivado el permiso de Tiempo de uso) se quedan en ese dispositivo. Las fotos y los informes se muestran en la pantalla de confirmación del padre o la madre después de que el niño termina de leer. Esa pantalla se abre sin PIN (para que el niño pueda ver sus propias fotos), pero confirmar o rechazar requiere el PIN.</p>
+
+<h2>Borrar datos</h2>
+<p>Al eliminar PlayAfter se borran sus datos. iOS puede conservar la clave del PIN en el llavero después de eliminar la app. La clave no sirve sin los datos borrados, y la app la borra la primera vez que se abre después de volver a instalarla. Al desactivar el interruptor de fotos, las fotos existentes se borran de inmediato. El desarrollador no tiene copia de ningún dato, así que no hay nada que pedirle que borre.</p>
+
+<h2>Seguridad</h2>
+<p>Todos los datos están en un almacenamiento que otras apps no pueden leer, protegido por el cifrado de archivos de iOS. El PIN se guarda como un hash creado con una clave que se guarda en el llavero solo en este dispositivo.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia, cambia la fecha de arriba, y el texto de la pantalla de consentimiento de la app coincidirá con la nueva versión.</p>
+
+<h2>Contacto</h2>
+<p>Desarrollador de PlayAfter: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+<hr>
+
+<section id="pt-BR" lang="pt-BR">
+<h1>Política de privacidade do PlayAfter para iOS</h1>
+<p class="meta">Em vigor a partir de 31 de outubro de 2026. Esta política cobre o app para iPhone e iPad. O app para Android tem sua própria política.</p>
+
+<p>O PlayAfter é um app para iPhone e iPad feito para pais e mães. Ele usa o Tempo de Uso da Apple para bloquear os apps que o pai ou a mãe escolhe até que a criança leia ou faça o dever de casa pelo tempo definido e o pai ou a mãe confirme com um PIN. Esta política explica quais dados o app acessa, para que os usa, onde os guarda e quando os apaga.</p>
+
+<h2>Texto da tela de consentimento</h2>
+<p>O app mostra este texto no idioma do dispositivo durante a configuração inicial, antes de pedir qualquer permissão. O pai ou a mãe precisa tocar em "Aceitar" para continuar.</p>
+<blockquote>
+<p id="consent.what">O PlayAfter usa o Tempo de Uso para bloquear os apps que você escolher neste dispositivo. Eles só abrem depois que seu filho ler ou fizer o dever de casa pelo tempo que você definiu e você confirmar com seu PIN.</p>
+<p id="consent.camera">Durante a leitura, o app usa a câmera frontal e só conta o tempo enquanto ela vê um rosto. As imagens da câmera são processadas somente neste dispositivo.</p>
+<p id="consent.screenTime">Se alguém desativar a permissão de Tempo de Uso do PlayAfter, o app avisa você na próxima vez que for aberto e mostra quantos minutos os apps bloqueados foram usados em cada hora desse período. O iOS mostra esses minutos somente neste dispositivo, e o app não consegue lê-los.</p>
+<p id="consent.offline">Nenhum dado sai deste dispositivo. O app não tem código que envie dados pela internet, nem anúncios ou análises de uso.</p>
+<p id="consent.parent">Este app foi feito para ser configurado por um pai ou uma mãe com 18 anos ou mais e para ser usado enquanto o pai ou a mãe estiver perto da criança.</p>
+<p id="snapshots.title" class="lead">Guardar fotos para conferir</p>
+<p id="snapshots.body">Quando ativado, o app guarda algumas fotos em baixa resolução da última sessão de leitura somente neste dispositivo, para você ver antes de confirmar, e as apaga quando você confirma ou recusa. Desativado por padrão.</p>
+</blockquote>
+
+<h2>Dados que o app acessa e guarda</h2>
+<table>
+<tr><th>Dados</th><th>Para que são usados</th><th>Onde e por quanto tempo</th></tr>
+<tr><td>Imagens da câmera frontal</td><td>Detectar se há um rosto, para contar o tempo de leitura. A câmera só funciona enquanto a tela de leitura está aberta.</td><td>Processadas na memória, um quadro por vez. Não são salvas. Nenhum vídeo é gravado.</td></tr>
+<tr><td>Fotos da última sessão de leitura (somente se o pai ou a mãe ativar a opção; desativada por padrão)</td><td>Permitir que o pai ou a mãe as veja antes de confirmar o tempo de leitura.</td><td>No máximo 6 fotos, com 320 px no lado maior, no armazenamento privado do app. Apagadas quando o pai ou a mãe confirma ou recusa, quando começa uma nova sessão de leitura ou quando a opção é desativada. Nunca são salvas na fototeca.</td></tr>
+<tr><td>Apps, categorias e sites que o pai ou a mãe escolhe bloquear</td><td>Bloqueá-los com o Tempo de Uso. O pai ou a mãe os escolhe no seletor do Tempo de Uso da Apple.</td><td>O iOS dá ao app apenas códigos (tokens) do que foi escolhido, não os nomes dos apps. Os códigos ficam guardados até o pai ou a mãe mudar a escolha ou apagar o app.</td></tr>
+<tr><td>Permissão do Tempo de Uso, e uso dos apps bloqueados enquanto ela estava desativada</td><td>Avisar o pai ou a mãe de que a permissão do Tempo de Uso foi desativada, e mostrar quantos minutos os apps bloqueados foram usados em cada hora desse período.</td><td>O app guarda a última vez que viu a permissão, e o horário de início e fim de cada período em que ela ficou desativada, até o pai ou a mãe confirmar ou recusar uma sessão de leitura. Os minutos são mostrados na tela de confirmação por uma extensão do PlayAfter por meio do relatório do Tempo de Uso da Apple. O próprio app não consegue lê-los nem guardá-los.</td></tr>
+<tr><td>PIN do pai ou da mãe</td><td>Confirmar o tempo de leitura, desbloquear por um tempo e abrir as configurações.</td><td>Guardado como um hash (HMAC) feito com uma chave no Keychain do dispositivo que fica somente neste dispositivo. O PIN em si não é guardado.</td></tr>
+<tr><td>Configurações e estado</td><td>Tempo de leitura, taxa de troca, estado da sessão de leitura, o horário de fim do tempo de jogo e dos desbloqueios temporários, e o número de tentativas erradas de PIN com o tempo de espera.</td><td>No armazenamento do app, compartilhado somente com as extensões do PlayAfter, até o app ser apagado.</td></tr>
+<tr><td>Notificações (somente iOS 17.0 a 26.4, se o pai ou a mãe permitir)</td><td>Quando a criança toca no botão da tela de bloqueio do Tempo de Uso, uma notificação permite abrir o PlayAfter.</td><td>Criadas no dispositivo. Nenhum servidor push é usado.</td></tr>
+<tr><td>Contagem regressiva do tempo de jogo (Live Activity)</td><td>Mostrar o tempo de jogo restante na Tela Bloqueada e na Dynamic Island.</td><td>Criada no dispositivo e encerrada quando o tempo de jogo acaba. Nenhum servidor push é usado.</td></tr>
+</table>
+<p>O app não acessa contatos, localização, microfone, fotos, mensagens nem outros arquivos do dispositivo.</p>
+
+<h2>Envio e compartilhamento de dados</h2>
+<p>O PlayAfter não envia dados para fora do dispositivo e não compartilha dados com ninguém. O app não tem código que envie dados pela internet, nem servidor, nem contas de usuário, nem anúncios, nem análises de uso, nem SDK de terceiros. Os arquivos dele ficam fora do backup do iCloud, então também não são copiados para o iCloud.</p>
+<p>Se o usuário ativou Compartilhar com Desenvolvedores nos ajustes de Análise do dispositivo, a Apple pode enviar relatórios de falhas ao desenvolvedor. Quem envia é a Apple, não o PlayAfter.</p>
+
+<h2>Crianças</h2>
+<p>O PlayAfter foi feito para um pai ou uma mãe com 18 anos ou mais instalar e configurar no dispositivo que a criança usa. Os dados da criança (imagens da câmera, fotos e o registro de quando a permissão do Tempo de Uso esteve desativada) ficam nesse dispositivo. As fotos e os relatórios aparecem na tela de confirmação do pai ou da mãe depois que a criança termina de ler. Essa tela abre sem PIN (para a criança ver as próprias fotos), mas confirmar ou recusar exige o PIN.</p>
+
+<h2>Apagar dados</h2>
+<p>Apagar o PlayAfter apaga os dados dele. O iOS pode manter a chave do PIN no Keychain depois que o app é apagado. A chave não serve para nada sem os dados apagados, e o app a apaga na primeira vez que é aberto depois de ser instalado de novo. Desativar a opção de fotos apaga as fotos existentes na hora. O desenvolvedor não tem cópia de nenhum dado, então não há nada para pedir que ele apague.</p>
+
+<h2>Segurança</h2>
+<p>Todos os dados ficam em um armazenamento que outros apps não conseguem ler, protegido pela criptografia de arquivos do iOS. O PIN é guardado como um hash feito com uma chave mantida no Keychain somente neste dispositivo.</p>
+
+<h2>Mudanças nesta política</h2>
+<p>Se esta política mudar, a data no topo muda, e o texto da tela de consentimento do app vai corresponder à nova versão.</p>
+
+<h2>Contato</h2>
+<p>Desenvolvedor do PlayAfter: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+<hr>
+
+<section id="id" lang="id">
+<h1>Kebijakan Privasi PlayAfter untuk iOS</h1>
+<p class="meta">Berlaku sejak 31 Oktober 2026. Kebijakan ini berlaku untuk aplikasi iPhone dan iPad. Aplikasi Android memiliki kebijakannya sendiri.</p>
+
+<p>PlayAfter adalah aplikasi iPhone dan iPad untuk orang tua. Aplikasi ini menggunakan Durasi Layar dari Apple untuk mengunci aplikasi yang dipilih orang tua sampai anak membaca atau mengerjakan pekerjaan rumah selama waktu yang ditetapkan dan orang tua mengonfirmasi dengan PIN. Kebijakan ini menjelaskan data apa yang diakses aplikasi, untuk apa data itu digunakan, di mana disimpan, dan kapan dihapus.</p>
+
+<h2>Teks layar persetujuan</h2>
+<p>Aplikasi menampilkan teks ini dalam bahasa perangkat saat penyiapan pertama, sebelum meminta izin apa pun. Orang tua harus mengetuk "Terima" untuk melanjutkan.</p>
+<blockquote>
+<p id="consent.what">PlayAfter menggunakan Durasi Layar untuk mengunci aplikasi yang Anda pilih di perangkat ini. Aplikasi tersebut baru bisa dibuka setelah anak Anda membaca atau mengerjakan pekerjaan rumah selama waktu yang Anda tetapkan, dan Anda sudah mengonfirmasi dengan PIN Anda.</p>
+<p id="consent.camera">Saat anak membaca, aplikasi menggunakan kamera depan dan hanya menghitung waktu ketika kamera melihat wajah. Gambar dari kamera hanya diproses di perangkat ini.</p>
+<p id="consent.screenTime">Jika seseorang menonaktifkan izin Durasi Layar untuk PlayAfter, aplikasi akan memberi tahu Anda saat dibuka berikutnya, dan menunjukkan berapa menit aplikasi yang dikunci digunakan di setiap jam selama periode itu. iOS menampilkan menit ini hanya di perangkat ini, dan aplikasi sendiri tidak dapat membacanya.</p>
+<p id="consent.offline">Tidak ada data yang keluar dari perangkat ini. Aplikasi tidak memiliki kode yang mengirim data melalui internet, serta tidak ada iklan maupun analitik.</p>
+<p id="consent.parent">Aplikasi ini dirancang untuk disiapkan oleh orang tua berusia 18 tahun ke atas, dan digunakan saat orang tua berada di dekat anak.</p>
+<p id="snapshots.title" class="lead">Simpan foto untuk diperiksa</p>
+<p id="snapshots.body">Jika diaktifkan, aplikasi menyimpan beberapa foto beresolusi rendah dari sesi membaca terakhir hanya di perangkat ini, agar dapat Anda lihat sebelum mengonfirmasi, lalu menghapusnya saat Anda mengonfirmasi atau menolak. Nonaktif secara default.</p>
+</blockquote>
+
+<h2>Data yang diakses dan disimpan aplikasi</h2>
+<table>
+<tr><th>Data</th><th>Digunakan untuk</th><th>Di mana dan berapa lama</th></tr>
+<tr><td>Gambar dari kamera depan</td><td>Mendeteksi apakah ada wajah, untuk menghitung waktu membaca. Kamera hanya berjalan saat layar membaca sedang tampil.</td><td>Diproses di memori satu bingkai setiap kali. Tidak disimpan. Tidak ada video yang direkam.</td></tr>
+<tr><td>Foto dari sesi membaca terakhir (hanya jika orang tua mengaktifkan sakelarnya; nonaktif secara default)</td><td>Agar orang tua dapat melihatnya sebelum mengonfirmasi waktu membaca.</td><td>Paling banyak 6 foto, 320 px pada sisi terpanjang, di penyimpanan pribadi aplikasi. Dihapus saat orang tua mengonfirmasi atau menolak, saat sesi membaca baru dimulai, atau saat sakelar dinonaktifkan. Tidak pernah disimpan ke perpustakaan foto.</td></tr>
+<tr><td>Aplikasi, kategori, dan situs web yang dipilih orang tua untuk dikunci</td><td>Menguncinya dengan Durasi Layar. Orang tua memilihnya di pemilih Durasi Layar dari Apple.</td><td>iOS hanya memberi aplikasi kode (token) untuk pilihan tersebut, bukan nama aplikasinya. Kode disimpan sampai orang tua mengubah pilihan atau menghapus aplikasi.</td></tr>
+<tr><td>Izin Durasi Layar, dan penggunaan aplikasi yang dikunci saat izin itu nonaktif</td><td>Memberi tahu orang tua bahwa izin Durasi Layar dinonaktifkan, dan menunjukkan berapa menit aplikasi yang dikunci digunakan di setiap jam selama periode itu.</td><td>Aplikasi menyimpan waktu terakhir ia melihat izin tersebut, serta waktu mulai dan selesai setiap periode saat izin nonaktif, sampai orang tua mengonfirmasi atau menolak sesi membaca. Menit ditampilkan di layar konfirmasi oleh ekstensi PlayAfter melalui laporan Durasi Layar dari Apple. Aplikasi sendiri tidak dapat membaca atau menyimpannya.</td></tr>
+<tr><td>PIN orang tua</td><td>Mengonfirmasi waktu membaca, membuka kunci sementara, dan membuka pengaturan.</td><td>Disimpan sebagai hash (HMAC) yang dibuat dengan kunci di Keychain perangkat yang tetap berada di perangkat ini. PIN itu sendiri tidak disimpan.</td></tr>
+<tr><td>Pengaturan dan status</td><td>Waktu membaca, rasio tukar, status sesi membaca, waktu berakhirnya waktu bermain dan buka kunci sementara, serta jumlah salah memasukkan PIN beserta waktu jeda.</td><td>Di penyimpanan aplikasi, hanya dibagikan dengan ekstensi milik PlayAfter, sampai aplikasi dihapus.</td></tr>
+<tr><td>Notifikasi (hanya iOS 17.0 sampai 26.4, jika orang tua mengizinkan)</td><td>Saat anak mengetuk tombol di layar blokir Durasi Layar, notifikasi memungkinkan anak membuka PlayAfter.</td><td>Dibuat di perangkat. Tidak menggunakan server push.</td></tr>
+<tr><td>Hitung mundur waktu bermain (Live Activity)</td><td>Menampilkan sisa waktu bermain di Layar Terkunci dan di Dynamic Island.</td><td>Dibuat di perangkat dan diakhiri saat waktu bermain habis. Tidak menggunakan server push.</td></tr>
+</table>
+<p>Aplikasi tidak mengakses kontak, lokasi, mikrofon, foto, pesan, atau file lain di perangkat.</p>
+
+<h2>Pengiriman dan berbagi data</h2>
+<p>PlayAfter tidak mengirim data keluar dari perangkat dan tidak membagikan data kepada siapa pun. Aplikasi tidak memiliki kode yang mengirim data melalui internet, tidak ada server, tidak ada akun pengguna, tidak ada iklan, tidak ada analitik, dan tidak ada SDK pihak ketiga. File aplikasi dikecualikan dari cadangan iCloud, sehingga juga tidak disalin ke iCloud.</p>
+<p>Jika pengguna mengaktifkan Bagikan dengan Pengembang App di pengaturan Analitik perangkat, Apple dapat mengirim laporan kerusakan kepada pengembang. Yang mengirimnya adalah Apple, bukan PlayAfter.</p>
+
+<h2>Anak-anak</h2>
+<p>PlayAfter dirancang untuk dipasang dan disiapkan oleh orang tua berusia 18 tahun ke atas di perangkat yang digunakan anak. Data anak (gambar kamera, foto, dan catatan kapan izin Durasi Layar nonaktif) tetap berada di perangkat itu. Foto dan laporan ditampilkan di layar konfirmasi orang tua setelah anak selesai membaca. Layar itu terbuka tanpa PIN (agar anak dapat melihat fotonya sendiri), tetapi mengonfirmasi atau menolak memerlukan PIN.</p>
+
+<h2>Menghapus data</h2>
+<p>Menghapus PlayAfter akan menghapus datanya. iOS mungkin tetap menyimpan kunci PIN di Keychain setelah aplikasi dihapus. Kunci itu tidak berguna tanpa data yang sudah dihapus, dan aplikasi menghapusnya saat pertama kali dibuka setelah dipasang lagi. Menonaktifkan sakelar foto langsung menghapus foto yang ada. Pengembang tidak memiliki salinan data apa pun, jadi tidak ada yang perlu diminta untuk dihapus dari pengembang.</p>
+
+<h2>Keamanan</h2>
+<p>Semua data berada di penyimpanan yang tidak dapat dibaca aplikasi lain, dilindungi oleh enkripsi file iOS. PIN disimpan sebagai hash yang dibuat dengan kunci yang disimpan di Keychain hanya di perangkat ini.</p>
+
+<h2>Perubahan kebijakan ini</h2>
+<p>Jika kebijakan ini berubah, tanggal di bagian atas akan berubah, dan teks layar persetujuan aplikasi akan sesuai dengan versi baru.</p>
+
+<h2>Kontak</h2>
+<p>Pengembang PlayAfter: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+<hr>
+
+<section id="vi" lang="vi">
+<h1>Chính sách quyền riêng tư của PlayAfter trên iOS</h1>
+<p class="meta">Có hiệu lực từ ngày 31 tháng 10 năm 2026. Chính sách này áp dụng cho ứng dụng trên iPhone và iPad. Ứng dụng Android có chính sách riêng.</p>
+
+<p>PlayAfter là ứng dụng trên iPhone và iPad dành cho phụ huynh. Ứng dụng dùng Thời gian sử dụng của Apple để khóa các ứng dụng phụ huynh chọn cho đến khi con đã đọc sách hoặc làm bài tập đủ thời gian đã đặt và phụ huynh xác nhận bằng mã PIN. Chính sách này giải thích ứng dụng truy cập dữ liệu gì, dùng để làm gì, lưu ở đâu và xóa khi nào.</p>
+
+<h2>Nội dung màn hình đồng ý</h2>
+<p>Ứng dụng hiển thị nội dung này theo ngôn ngữ của thiết bị trong lần thiết lập đầu tiên, trước khi xin bất kỳ quyền nào. Phụ huynh phải chạm "Đồng ý" để tiếp tục.</p>
+<blockquote>
+<p id="consent.what">PlayAfter dùng Thời gian sử dụng để khóa các ứng dụng bạn chọn trên thiết bị này. Các ứng dụng đó chỉ mở được sau khi con bạn đã đọc sách hoặc làm bài tập đủ thời gian bạn đặt, và bạn đã xác nhận bằng mã PIN của mình.</p>
+<p id="consent.camera">Trong lúc con đọc, ứng dụng dùng camera trước để tính thời gian, và chỉ tính khi camera nhìn thấy khuôn mặt. Hình ảnh từ camera chỉ được xử lý trên thiết bị này.</p>
+<p id="consent.screenTime">Nếu ai đó tắt quyền Thời gian sử dụng của PlayAfter, ứng dụng sẽ báo cho bạn vào lần mở tiếp theo, và cho biết các ứng dụng bị khóa đã được dùng bao nhiêu phút trong mỗi giờ của khoảng thời gian đó. iOS chỉ hiển thị số phút này trên thiết bị này, và bản thân ứng dụng không đọc được.</p>
+<p id="consent.offline">Không có dữ liệu nào rời khỏi thiết bị này. Ứng dụng không có mã gửi dữ liệu qua internet, và không có quảng cáo hay phân tích sử dụng.</p>
+<p id="consent.parent">Ứng dụng này được thiết kế để phụ huynh từ 18 tuổi trở lên thiết lập, và để dùng khi phụ huynh ở gần con.</p>
+<p id="snapshots.title" class="lead">Lưu ảnh chụp để xem lại</p>
+<p id="snapshots.body">Khi bật, ứng dụng lưu một vài ảnh chụp độ phân giải thấp của lượt đọc gần nhất, chỉ trên thiết bị này, để bạn xem trước khi xác nhận, và xóa các ảnh đó khi bạn xác nhận hoặc từ chối. Mặc định tắt.</p>
+</blockquote>
+
+<h2>Dữ liệu ứng dụng truy cập và lưu giữ</h2>
+<table>
+<tr><th>Dữ liệu</th><th>Dùng để</th><th>Lưu ở đâu và trong bao lâu</th></tr>
+<tr><td>Hình ảnh từ camera trước</td><td>Phát hiện có khuôn mặt hay không, để tính thời gian đọc. Camera chỉ chạy khi màn hình đọc đang hiển thị.</td><td>Được xử lý trong bộ nhớ, từng khung hình một. Không lưu lại. Không quay video.</td></tr>
+<tr><td>Ảnh chụp của lượt đọc gần nhất (chỉ khi phụ huynh bật công tắc; mặc định tắt)</td><td>Để phụ huynh xem trước khi xác nhận thời gian đọc.</td><td>Tối đa 6 ảnh, cạnh dài 320 px, trong bộ nhớ riêng của ứng dụng. Bị xóa khi phụ huynh xác nhận hoặc từ chối, khi bắt đầu lượt đọc mới, hoặc khi tắt công tắc. Không bao giờ lưu vào thư viện ảnh.</td></tr>
+<tr><td>Ứng dụng, danh mục và trang web phụ huynh chọn để khóa</td><td>Khóa chúng bằng Thời gian sử dụng. Phụ huynh chọn trong bộ chọn Thời gian sử dụng của Apple.</td><td>iOS chỉ cung cấp cho ứng dụng các mã (token) của lựa chọn, không cung cấp tên ứng dụng. Các mã được lưu cho đến khi phụ huynh đổi lựa chọn hoặc xóa ứng dụng.</td></tr>
+<tr><td>Quyền Thời gian sử dụng, và việc dùng các ứng dụng bị khóa trong lúc quyền này bị tắt</td><td>Báo cho phụ huynh biết quyền Thời gian sử dụng đã bị tắt, và cho biết các ứng dụng bị khóa đã được dùng bao nhiêu phút trong mỗi giờ của khoảng thời gian đó.</td><td>Ứng dụng lưu lần gần nhất nó thấy quyền này, cùng thời điểm bắt đầu và kết thúc của mỗi khoảng quyền bị tắt, cho đến khi phụ huynh xác nhận hoặc từ chối một lượt đọc. Số phút được một tiện ích mở rộng của PlayAfter hiển thị trên màn hình xác nhận thông qua báo cáo Thời gian sử dụng của Apple. Bản thân ứng dụng không đọc được và không lưu được số phút này.</td></tr>
+<tr><td>Mã PIN của phụ huynh</td><td>Xác nhận thời gian đọc, mở khóa tạm thời và mở phần cài đặt.</td><td>Được lưu dưới dạng mã băm (HMAC) tạo bằng một khóa trong Keychain của thiết bị, khóa này chỉ nằm trên thiết bị này. Bản thân mã PIN không được lưu.</td></tr>
+<tr><td>Cài đặt và trạng thái</td><td>Thời gian đọc, tỉ lệ đổi, trạng thái lượt đọc, thời điểm kết thúc thời gian chơi và mở khóa tạm thời, và số lần nhập sai mã PIN cùng thời gian chờ.</td><td>Trong bộ nhớ của ứng dụng, chỉ dùng chung với các tiện ích mở rộng của PlayAfter, cho đến khi ứng dụng bị xóa.</td></tr>
+<tr><td>Thông báo (chỉ iOS 17.0 đến 26.4, nếu phụ huynh cho phép)</td><td>Khi con chạm nút trên màn hình chặn của Thời gian sử dụng, một thông báo giúp con mở PlayAfter.</td><td>Được tạo trên thiết bị. Không dùng máy chủ push.</td></tr>
+<tr><td>Đếm ngược thời gian chơi (Live Activity)</td><td>Hiển thị thời gian chơi còn lại trên Màn hình khóa và trong Dynamic Island.</td><td>Được tạo trên thiết bị và kết thúc khi hết thời gian chơi. Không dùng máy chủ push.</td></tr>
+</table>
+<p>Ứng dụng không truy cập danh bạ, vị trí, micrô, ảnh, tin nhắn hoặc các tệp khác trên thiết bị.</p>
+
+<h2>Gửi và chia sẻ dữ liệu</h2>
+<p>PlayAfter không gửi dữ liệu ra khỏi thiết bị và không chia sẻ dữ liệu với bất kỳ ai. Ứng dụng không có mã gửi dữ liệu qua internet, không có máy chủ, không có tài khoản người dùng, không có quảng cáo, không có phân tích sử dụng và không có SDK của bên thứ ba. Các tệp của ứng dụng không nằm trong bản sao lưu iCloud, nên cũng không bị sao chép lên iCloud.</p>
+<p>Nếu người dùng đã bật Chia sẻ với nhà phát triển ứng dụng trong phần cài đặt Phân tích của thiết bị, Apple có thể gửi báo cáo sự cố cho nhà phát triển. Apple gửi các báo cáo này, không phải PlayAfter.</p>
+
+<h2>Trẻ em</h2>
+<p>PlayAfter được thiết kế để phụ huynh từ 18 tuổi trở lên cài đặt và thiết lập trên thiết bị con dùng. Dữ liệu của con (hình ảnh camera, ảnh chụp và ghi nhận khi nào quyền Thời gian sử dụng bị tắt) nằm trên thiết bị đó. Ảnh chụp và báo cáo được hiển thị trên màn hình xác nhận của phụ huynh sau khi con đọc xong. Màn hình đó mở được mà không cần mã PIN (để con xem được ảnh của chính mình), nhưng xác nhận hoặc từ chối thì cần mã PIN.</p>
+
+<h2>Xóa dữ liệu</h2>
+<p>Xóa PlayAfter sẽ xóa dữ liệu của ứng dụng. iOS có thể giữ khóa của mã PIN trong Keychain sau khi ứng dụng bị xóa. Khóa này vô dụng khi không có dữ liệu đã bị xóa, và ứng dụng sẽ xóa khóa vào lần mở đầu tiên sau khi được cài lại. Tắt công tắc ảnh chụp sẽ xóa ngay các ảnh hiện có. Nhà phát triển không giữ bản sao của bất kỳ dữ liệu nào, nên không có gì cần yêu cầu nhà phát triển xóa.</p>
+
+<h2>Bảo mật</h2>
+<p>Mọi dữ liệu nằm trong bộ nhớ mà ứng dụng khác không đọc được, được bảo vệ bằng mã hóa tệp của iOS. Mã PIN được lưu dưới dạng mã băm tạo bằng một khóa chỉ được giữ trong Keychain trên thiết bị này.</p>
+
+<h2>Thay đổi chính sách này</h2>
+<p>Nếu chính sách này thay đổi, ngày ở đầu trang sẽ thay đổi, và nội dung màn hình đồng ý của ứng dụng sẽ khớp với phiên bản mới.</p>
+
+<h2>Liên hệ</h2>
+<p>Nhà phát triển PlayAfter: <a href="mailto:support@chikimo.com">support@chikimo.com</a></p>
+</section>
+
+
+</main>
+</body>
+</html>
